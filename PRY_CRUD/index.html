@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD DE USUARIOS</title>
+    <link
+      rel="stylesheet"
+      href="./public/lib/bootstrap-5.3.5-dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(120deg, #a5b4fc 0%, #f8fafc 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-custom {
+        background: rgba(255,255,255,0.95);
+        border-radius: 22px;
+        box-shadow: 0 8px 32px rgba(44, 62, 80, 0.14);
+        padding: 2.5rem 3rem;
+        margin-top: 0;
+        border: 1px solid #e0eafc;
+        position: relative;
+        overflow: hidden;
+      }
+      .card-custom::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, #4f8cff33 60%, transparent 100%);
+        z-index: 0;
+      }
+      .card-custom::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: -40px;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, #818cf833 60%, transparent 100%);
+        z-index: 0;
+      }
+      .card-custom > * {
+        position: relative;
+        z-index: 1;
+      }
+      .btn-primary {
+        background-color: #4f8cff;
+        border-color: #4f8cff;
+        color: #fff;
+        box-shadow: 0 2px 8px #4f8cff33;
+      }
+      .btn-primary:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+        box-shadow: 0 4px 16px #2563eb33;
+      }
+      .btn-dark {
+        background-color: #2d3a4b;
+        border-color: #2d3a4b;
+        color: #fff;
+        box-shadow: 0 2px 8px #2d3a4b33;
+      }
+      .btn-dark:hover {
+        background-color: #1e293b;
+        border-color: #1e293b;
+        box-shadow: 0 4px 16px #1e293b33;
+      }
+      .btn-secondary {
+        background-color: #a5b4fc;
+        border-color: #a5b4fc;
+        color: #2d3a4b;
+        box-shadow: 0 2px 8px #a5b4fc33;
+      }
+      .btn-secondary:hover {
+        background-color: #818cf8;
+        border-color: #818cf8;
+        color: #fff;
+        box-shadow: 0 4px 16px #818cf833;
+      }
+      .btn-primary, .btn-dark, .btn-secondary {
+        min-width: 180px;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+        border-radius: 10px;
+        transition: transform 0.12s, box-shadow 0.12s;
+        font-size: 1.08rem;
+        padding: 0.7rem 0;
+      }
+      .btn-primary:hover, .btn-dark:hover, .btn-secondary:hover {
+        transform: scale(1.07);
+      }
+      h1 {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-weight: 800;
+        color: #2d3a4b;
+        letter-spacing: 2px;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 0 2px 8px #a5b4fc33;
+      }
+      .btn-group-custom {
+        gap: 20px;
+        width: 100%;
+      }
+      .btn-group-custom a {
+        width: 100%;
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        .card-custom {
+          padding: 1.2rem 0.7rem;
+          max-width: 98vw;
+        }
+        h1 {
+          font-size: 1.3rem;
+        }
+        .btn-primary, .btn-dark, .btn-secondary {
+          min-width: 120px;
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="card-custom w-100" style="max-width: 480px;">
+        <h1 class="mb-4 text-center">CRUD DE USUARIOS</h1>
+        <div class="d-flex flex-column align-items-center btn-group-custom">
+          <a href="./app/crear.php" class="btn btn-primary mb-2">Crear Usuario</a>
+          <a href="./app/crear_materia.php" class="btn btn-dark mb-2">Crear Materia</a>
+          <a href="./app/ingresarNotas.php" class="btn btn-dark mb-2">Ingresar Notas</a>
+          <a href="./app/listar.php" class="btn btn-secondary mb-2">Lista Usuarios</a>
+          <a href="./app/listarNotas.php" class="btn btn-secondary">Lista Notas</a>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
